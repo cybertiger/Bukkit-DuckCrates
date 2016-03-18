@@ -1,0 +1,55 @@
+dbUrl: 'jdbc:mysql://localhost/duckcrates'
+dbUser: 'root'
+dbPassword: ''
+
+groups:
+        Voting:
+                name: 'minecraft:chest'
+                damage: 0
+                tag: '{display: {Name: "Voting Chest"}}'
+                message: 'You open a voting crate!'
+                rewardCount: []
+                items: []
+                commands: []
+        Donator:
+                name: 'minecraft:chest'
+                damage: 0
+                tag: '{display: {Name: "Donator Chest"}}'
+                message: 'You open a donator crate!'
+                rewardCount:
+                        - permission: 'group.donator10'
+                          daily: '5'
+                          once: '50'
+                items:
+                        - chance: 0.5
+                          message: 'Diamond blocks are a girls best friend'
+                          name: 'minecraft:diamond_block'
+                          damage: 0
+                          count: 1
+                          tag: '{}'
+                commands:
+                        - chance: 0.5
+                          message: 'You feel ranked up'
+                          asOP: true
+                          command: 'promote %s'
+        Community:
+                name: 'minecraft:chest'
+                damage: 0
+                tag: '{display:{Name:"Community Chest"}}'
+                message: 'You open a community crate'
+                rewardCount:
+                        - permission: 'group.community100'
+                          daily: 5
+                          once: 0
+                items:
+                        - chance: 0.5
+                          message: 'Diamond blocks are a girls best friend'
+                          name: 'minecraft:diamond_block'
+                          damage: 0
+                          count: 1
+                          tag: '{}'
+                commands:
+                        - chance: 0.5
+                          message: 'You feel ranked up'
+                          asOP: true
+                          command: 'promote %s'
